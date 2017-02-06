@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Runtime.InteropServices;
 
-namespace ComUser {
+namespace ComUtil {
 
     public static class ComHelper {
 
@@ -14,8 +14,9 @@ namespace ComUser {
                                                         CLSCTX dwClsContext,
                                                         [In, MarshalAs(UnmanagedType.LPStruct)] Guid riid);
 
-        [DllImport("kernel32", SetLastError = true, CharSet = CharSet.Ansi)]
-        public static extern IntPtr LoadLibrary([MarshalAs(UnmanagedType.LPStr)]string lpFileName);
+        public static dynamic CreateOutOfProcessComObject(Guid guid) {
+            return CoCreateInstance(guid, null, CLSCTX.CLSCTX_LOCAL_SERVER, UNKNOWN);
+        }
     }
 
     [Flags]
