@@ -70,6 +70,10 @@
     <None Include="binco.snk" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BinomialCoefficientBridge\BinomialCoefficientBridge.vcxproj">
+      <Project>{c4c61d74-98cf-4d61-afae-c8afd677c51b}</Project>
+      <Name>BinomialCoefficientBridge</Name>
+    </ProjectReference>
     <ProjectReference Include="..\BinomialInterface\BinomialInterface.csproj">
       <Project>{6c91e4e2-b4d5-4afd-a4a8-f3f8223af594}</Project>
       <Name>BinomialInterface</Name>

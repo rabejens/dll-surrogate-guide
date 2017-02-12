@@ -4,3 +4,6 @@ bin/
 obj/
 *.sdf
 *.suo
+*.VC.db
+*.opendb
+*.ipch
