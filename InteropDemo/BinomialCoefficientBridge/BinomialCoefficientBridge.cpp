@@ -8,6 +8,7 @@ namespace BinomialCoefficientBridge {
 
 	BinomialCoefficientBridge::BinomialCoefficientBridge() {
 		u_delegate = new UnmanagedBinomialCoefficient();
+		m_disposed = false;
 	}
 
 	BinomialCoefficientBridge::~BinomialCoefficientBridge() {
